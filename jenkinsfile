@@ -47,7 +47,7 @@ pipeline {
                //def DokerRun = "docker run -p 8090:8080 -d -t 609352431981.dkr.ecr.us-east-1.amazonaws.com/shraddha-test:${BUILD_NUMBER}"
                
                sshagent(['tomcat']) {
-                    sh "ssh -o StrictHostKeyChecking=no ec2-user@43.204.141.186 docker run -d -t -p 8090:8080 806670424064.dkr.ecr.ap-south-1.amazonaws.com/docker-testing:latest:${BUILD_NUMBER}"
+                    sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.1.14 docker run -d -t -p 8090:8080 806670424064.dkr.ecr.ap-south-1.amazonaws.com/docker-testing:latest:${BUILD_NUMBER}"
                     
                   
                }
